@@ -4,6 +4,30 @@
     font-family: 'roboto',sans-serif;
 
 }
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.loading-icon {
+    width: 1000px;
+}
+
+.loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 .container{
     width: 100%;
@@ -43,4 +67,23 @@ nav ul li a{
 .data{
     margin-top:10ch;
     word-spacing:1ch;
+}
+.nav ul li a {
+    color: black; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    animation: colorBlink 1s infinite alternate; 
+    color: red; 
+}
+
+@keyframes colorBlink {
+    0% { color: red; }
+    20% { color: blue; }
+    40% { color: green; }
+    60% { color: yellow; }
+    80% { color: gray; }
+    100% { color: black; }
 }

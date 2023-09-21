@@ -18,3 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(`Sign Up: Username - ${username}, Password - ${password}`);
     });
 });
+
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        document.querySelector('.loading-overlay').classList.add('loaded');
+    }, 1000);
+});
